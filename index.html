@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-mail List</title>
+    <title>Vue Email List</title>
     <!--Link Css-->
     <link rel="stylesheet" href="css/style.css">
+    <!--Link Axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-  
+    <div id="app">  
+        <h1>Lista Email</h1>
+        <div class="email-list"  v-if="emailList.length === 10">
+            <ul>
+                <li v-for="email in emailList">{{ email }}</li>
+            </ul>
+        </div>
+    </div>
+    <!--Link Vue Js-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--Link Js-->
     <script src="js/main.js"></script>
 </body>
 </html>
